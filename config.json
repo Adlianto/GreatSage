@@ -1,0 +1,17 @@
+{
+    "suara_aktif": true,
+    "volume": 80,
+    "baterai": {
+        "colok_cabut": true,
+        "persentasi_baterai": 20,
+        "ambang_penuh": 90
+    },
+    "notifikasi": {
+        "pantau_chat": true,
+        "pantau_telepon": true,
+        "cooldown_detik": 4
+    },
+    "sistem": {
+        "run_on_startup": true
+    }
+}
