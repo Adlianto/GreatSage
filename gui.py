@@ -12,7 +12,6 @@ ctk.set_default_color_theme("blue")
 def start_engine_if_not_running():
     engine_name = "GreatSageEngine.exe"
     
-    # 1. Cek apakah engine sudah berjalan di Task Manager
     for proc in psutil.process_iter(['name']):
         try:
             if proc.info['name'] and proc.info['name'].lower() == engine_name.lower():
@@ -20,7 +19,6 @@ def start_engine_if_not_running():
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             continue
 
-    # 2. Tentukan letak direktori aplikasi (kompatibel saat jadi exe maupun file script py biasa)
     if getattr(sys, 'frozen', False):
         base_dir = os.path.dirname(sys.executable)
     else:
